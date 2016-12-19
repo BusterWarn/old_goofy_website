@@ -1,0 +1,102 @@
+html, body {
+	height: 100%;
+}
+
+#portfolio {
+	overflow: hidden;
+}
+
+#resume {
+	height: 100%;
+	width: 100%;
+	background-color: violet;
+}
+
+#aboutMe {
+	background-color: black;
+}
+
+.hidden {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+/*----------Header----------*/
+
+.header {
+	color: #FFFFFF;
+	background-color: pink;
+	height: 40%;
+	text-align: center;
+}
+
+.left {
+	height: 50px;
+	background-color: gray;
+}
+
+.right {
+	height: 50px;
+	background-color: black;
+}
+
+/*----------Slider----------*/
+
+.slider {
+	background-color: gray;
+	margin: 0;
+	padding: 0;
+	height: 700px;
+	width: 200%;
+	border: 4px solid black;
+}
+
+.slider ul {
+	display: block;
+	list-style-type: none;
+	border: 3px dashed yellow;
+}
+
+.slider ul li {
+	display: inline-block;
+	min-height: 100px;
+	width:  50%;
+	border: 2px dashed red;
+	clear: none;
+}
+
+.slider ul #frontend {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: green;
+}
+
+.slider ul #backend {
+	float: right;
+	margin: 0;
+	padding: 0;
+	background-color: blue;
+}
+
+.slider ul li .container {
+	margin: 0 auto;
+	height: 100%;
+	width: 30%;
+	border: 2px solid red;
+}
+
+.slider ul li .container .show {
+	width: 100%;
+	height: 200px;
+	background-color: white;
+}
