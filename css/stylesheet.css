@@ -1,5 +1,11 @@
-html, body {
+html {
 	height: 100%;
+	background-color: #fff;
+}
+
+body {
+	height: 100%;
+    background-color: #fff;
 }
 
 #portfolio {
@@ -7,96 +13,290 @@ html, body {
 }
 
 #resume {
-	height: 100%;
-	width: 100%;
-	background-color: violet;
+	background-color: #fff;
+	overflow: hidden;
 }
 
 #aboutMe {
-	background-color: black;
+	background-color: #fff;
+	overflow: hidden;
 }
 
 .hidden {
 	display: none;
 }
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-h1 {
-	margin: 0;
-	padding: 0;
-}
-
 /*----------Header----------*/
 
 .header {
-	color: #FFFFFF;
-	background-color: pink;
-	height: 40%;
+	position: relative;
+    margin: 0;
+	color: #000;
+	min-height: 400px;
+	background-color: #fff;
 	text-align: center;
+	overflow: hidden;
 }
 
-.left {
+.header #portNavbar2 {
+	width: 100%;
 	height: 50px;
-	background-color: gray;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
 }
 
-.right {
-	height: 50px;
-	background-color: black;
+.header #portNavbar2 #frontEndClick,
+.header #portNavbar2 #backEndClick {
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	height: 100%;
 }
+
+.header #portNavbar2 #frontEndClick {
+	background-color: #D0D1AC;
+	left: 0;
+}
+
+.header #portNavbar2 #backEndClick {
+	background-color: #D0D1AC;
+	right: 0;
+}
+
+.header #frontEndClick p,
+.header #backEndClick p {
+	margin: 0;
+}
+
+.header #portNavbar2 div .butt {
+	position: absolute;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+}
+
+.header #portNavbar2 #frontEndClick .butt {
+	display: inline;
+	background-color: #948B89;
+}
+
+.header #portNavbar2 #backEndClick .butt {
+	display: inline;
+	background-color: #726E75;
+}
+
 
 /*----------Slider----------*/
 
 .slider {
-	background-color: gray;
+	background-color: blue;
 	margin: 0;
 	padding: 0;
 	height: 700px;
 	width: 200%;
-	border: 4px solid black;
 }
 
 .slider ul {
+	margin: 0;
+	padding: 0;
+    width: 100%;
 	display: block;
 	list-style-type: none;
-	border: 3px dashed yellow;
 }
 
 .slider ul li {
 	display: inline-block;
-	min-height: 100px;
+	min-height: 200px;
 	width:  50%;
-	border: 2px dashed red;
 	clear: none;
 }
 
 .slider ul #frontend {
 	float: left;
 	margin: 0;
-	padding: 0;
-	background-color: green;
+	padding: 0 0 0 50px;
+	background-color: #fff;
 }
 
 .slider ul #backend {
+    padding: 0 50px 0 0;
 	float: right;
 	margin: 0;
-	padding: 0;
-	background-color: blue;
+	background-color: #fff;
 }
+
+/*----------Show----------*/
 
 .slider ul li .container {
 	margin: 0 auto;
-	height: 100%;
-	width: 30%;
-	border: 2px solid red;
+	width: 1080px;
 }
 
 .slider ul li .container .show {
+	position: relative;
+	margin: 150px 0;
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
 	background-color: white;
+	text-align: center;
 }
+
+.slider ul li .container .show:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -75px;
+	width: 100%;
+	border-bottom: 1px solid #726E75;
+}
+
+.slider ul li .container .show:last-child:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border:none;
+}
+
+.slider ul li .container .show:last-child {
+	border: none;
+}
+
+.slider ul li .container .show:hover:after {
+	content:"\A";
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 50px #000;
+	animation-name: shadow;
+	animation-duration: 0.3s;
+	cursor: pointer;
+}
+
+.slider ul li .container .show h2 {
+	margin: 0;
+	padding: 20px 0;
+	width: 100%;
+	position: absolute;
+    color: #fff;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider ul li .container .show .showfooter {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 5px 0;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider ul li .container .show .showfooter ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+}
+
+.slider ul li .container .show .showfooter ul li {
+	position: relative;
+	display: inline;
+	top: 2px;
+	margin: 0 5px;
+	padding: 2px 5px;
+	height: 10px;
+	font-size: 20px;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+.slider ul li .container .show .exampleImg {
+	width: 100%;
+}
+
+.slider ul li .container .show .exampleImg:hover:after {
+	content:"\A";
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+/*----------.body----------*/
+.body {
+	border: 2px solid red;
+}
+
+/*----------Modal----------*/
+
+#myModal .modal-content .modal-body img {
+	width: 100%
+}
+
+#myModal .modal-content .modal-footer ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+}
+
+#myModal .modal-content .modal-footer ul li {
+	position: relative;
+	display: inline;
+	top: 2px;
+	margin: 0 5px;
+	padding: 2px 5px;
+	height: 10px;
+	font-size: 20px;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+#myModal {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#myModal .modal-content .modal-body p,
+#myModal .modal-content .modal-body > a {
+	display: block;
+}
+/*
+#myModal .modal-content {
+}
+
+#myModal .modal-content .modal-header {
+}
+
+#myModal .modal-content .modal-footer {
+}*/
+
+/*----------Animations----------*/
+
+@keyframes shadow {
+	0% {background-color: transparent;}
+	0% {box-shadow: 0 0 0 transparent;}
+	100% {background-color: rgba(0, 0, 0, 0.5);}
+	100% {box-shadow: 0 0 35px #000;}
+}
+
+
+
+
+
+
+
+
